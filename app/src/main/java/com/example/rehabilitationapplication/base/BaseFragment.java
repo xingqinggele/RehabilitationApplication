@@ -94,7 +94,7 @@ public abstract class BaseFragment<T extends BasePresenter,V extends IBaseView>e
 
 
     public void SwipeData(SwipeRefreshLayout swipeRefreshLayout){
-        swipeRefreshLayout.setColorSchemeResources(R.color.login_title, R.color.green, R.color.colorAccent);
+//        swipeRefreshLayout.setColorSchemeResources(R.color.login_title, R.color.green, R.color.colorAccent);
         swipeRefreshLayout.setOnRefreshListener(this);
     }
 
