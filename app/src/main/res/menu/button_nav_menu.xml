@@ -6,12 +6,12 @@
         android:icon="@drawable/home_page_btn_iv"
         android:title="运动" />
     <item
-        android:id="@+id/data_btn"
-        android:icon="@drawable/home_data_btn_iv"
+        android:id="@+id/health_btn"
+        android:icon="@drawable/home_health_btn_iv"
         android:title="健康" />
     <item
-        android:id="@+id/me_btn"
-        android:icon="@drawable/home_me_btn_iv"
+        android:id="@+id/knowledge_btn"
+        android:icon="@drawable/home_knowledge_btn_iv"
         android:title="知识" />
     <item
         android:id="@+id/me_btn"

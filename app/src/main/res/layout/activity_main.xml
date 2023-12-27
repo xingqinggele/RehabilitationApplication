@@ -27,6 +27,7 @@
         app:itemTextColor="@color/main_tv_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/button_nav_menu"
+        app:labelVisibilityMode="labeled"
         app:itemIconSize="20dp"
         android:theme="@style/myNavigationDrawerStyle"/>
 

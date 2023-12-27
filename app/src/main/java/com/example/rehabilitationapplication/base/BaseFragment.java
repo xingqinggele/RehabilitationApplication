@@ -98,9 +98,6 @@ public abstract class BaseFragment<T extends BasePresenter,V extends IBaseView>e
         swipeRefreshLayout.setOnRefreshListener(this);
     }
 
-    public String getUserId(){
-        return SPUtils.get(getActivity(), "userId", "").toString();
-    }
 
 
     @Override
