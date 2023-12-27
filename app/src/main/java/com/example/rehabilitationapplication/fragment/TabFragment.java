@@ -23,17 +23,17 @@ public class TabFragment extends Fragment {
             return fragment;
         }
 
-    @Nullable
-    @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_tab, container, false);
-
-        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recycle_list);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
-        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        recyclerView.setLayoutManager(linearLayoutManager);
-        recyclerView.setAdapter(new RecyclerAdapter());
-
-        return view;
-    }
+//    @Nullable
+//    @Override
+//    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+//        View view = inflater.inflate(R.layout.fragment_tab, container, false);
+//
+//        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recycle_list);
+//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+//        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+//        recyclerView.setLayoutManager(linearLayoutManager);
+//        recyclerView.setAdapter(new RecyclerAdapter());
+//
+//        return view;
+//    }
 } 
