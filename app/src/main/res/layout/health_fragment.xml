@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="健  康"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.lihang.ShadowLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                app:hl_cornerRadius="5dp"
+                app:hl_shadowColor="#2a000000"
+                app:hl_shadowLimit="5dp">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/iv1"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@mipmap/xinlv_iv"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@mipmap/back_right"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv1"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/iv1" />
+
+
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:text="心率"
+                        android:textSize="14sp"
+                        app:layout_constraintLeft_toLeftOf="@+id/iv1"
+                        app:layout_constraintTop_toBottomOf="@+id/iv1" />
+
+
+                    <TextView
+                        android:id="@+id/tv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="100dp"
+                        android:text="预警次数"
+                        android:textSize="14sp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv1" />
+
+
+                    <TextView
+                        android:id="@+id/tv3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="89"
+                        android:textColor="#fa9191"
+                        android:textSize="28sp"
+                        app:layout_constraintLeft_toLeftOf="@+id/tv1"
+                        app:layout_constraintTop_toBottomOf="@+id/tv1" />
+
+
+                    <TextView
+                        android:id="@+id/tv4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="次/分"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv3"
+                        app:layout_constraintLeft_toRightOf="@+id/tv3" />
+
+                    <TextView
+                        android:id="@+id/tv5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="#fa9191"
+                        android:textSize="28sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv3"
+                        app:layout_constraintLeft_toLeftOf="@+id/tv2"
+                        app:layout_constraintTop_toTopOf="@+id/tv3" />
+
+                    <TextView
+                        android:id="@+id/tv6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="次"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv5"
+                        app:layout_constraintLeft_toRightOf="@+id/tv5" />
+
+
+                    <TextView
+                        android:id="@+id/tv7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="30dp"
+                        android:text="最大心率"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv3" />
+
+
+                    <TextView
+                        android:id="@+id/tv10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="40dp"
+                        android:text="平均心率"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv7"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv7" />
+
+                    <TextView
+                        android:id="@+id/tv8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="194次/分"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="@+id/tv7"
+                        app:layout_constraintRight_toRightOf="@+id/tv7"
+                        app:layout_constraintTop_toBottomOf="@+id/tv7" />
+
+                    <TextView
+                        android:id="@+id/tv9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="194次/分"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv8"
+                        app:layout_constraintLeft_toLeftOf="@+id/tv10"
+                        app:layout_constraintRight_toRightOf="@+id/tv10"
+                        app:layout_constraintTop_toTopOf="@+id/tv8" />
+
+                </android.support.constraint.ConstraintLayout>
+
+            </com.lihang.ShadowLayout>
+
+            <com.lihang.ShadowLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                app:hl_cornerRadius="5dp"
+                app:hl_shadowColor="#2a000000"
+                app:hl_shadowLimit="5dp">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/xiv1"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@mipmap/xueyang_iv"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@mipmap/back_right"
+                        app:layout_constraintBottom_toBottomOf="@+id/xiv1"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/xiv1" />
+
+
+                    <TextView
+                        android:id="@+id/xtv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:text="血氧饱和度"
+                        android:textSize="14sp"
+                        app:layout_constraintLeft_toLeftOf="@+id/xiv1"
+                        app:layout_constraintTop_toBottomOf="@+id/xiv1" />
+
+
+                    <TextView
+                        android:id="@+id/xtv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="100dp"
+                        android:text="预警次数"
+                        android:textSize="14sp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/xtv1" />
+
+
+                    <TextView
+                        android:layout_marginBottom="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:id="@+id/xtv3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="89"
+                        android:textColor="#dda0fa"
+                        android:textSize="28sp"
+                        app:layout_constraintLeft_toLeftOf="@+id/xtv1"
+                        app:layout_constraintTop_toBottomOf="@+id/xtv1" />
+
+
+                    <TextView
+                        android:id="@+id/xtv4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="%"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/xtv3"
+                        app:layout_constraintLeft_toRightOf="@+id/xtv3" />
+
+                    <TextView
+                        android:id="@+id/xtv5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="#dda0fa"
+                        android:textSize="28sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/xtv3"
+                        app:layout_constraintLeft_toLeftOf="@+id/xtv2"
+                        app:layout_constraintTop_toTopOf="@+id/xtv3" />
+
+                    <TextView
+                        android:id="@+id/xtv6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="次"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/xtv5"
+                        app:layout_constraintLeft_toRightOf="@+id/xtv5" />
+
+
+                </android.support.constraint.ConstraintLayout>
+
+            </com.lihang.ShadowLayout>
+
+            <com.lihang.ShadowLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                app:hl_cornerRadius="5dp"
+                app:hl_shadowColor="#2a000000"
+                app:hl_shadowLimit="5dp"
+                android:layout_marginBottom="20dp">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/yiv1"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@mipmap/xueya_iv"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@mipmap/back_right"
+                        app:layout_constraintBottom_toBottomOf="@+id/yiv1"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/yiv1" />
+
+                    <TextView
+                        android:id="@+id/ytv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:text="舒张压"
+                        android:textSize="14sp"
+                        app:layout_constraintLeft_toLeftOf="@+id/yiv1"
+                        app:layout_constraintTop_toBottomOf="@+id/yiv1" />
+
+
+                    <TextView
+                        android:id="@+id/ytv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="100dp"
+                        android:text="预警次数"
+                        android:textSize="14sp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/ytv1" />
+
+                    <TextView
+
+                        android:id="@+id/ytv3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="89"
+                        android:textColor="#418dfa"
+                        android:textSize="28sp"
+                        app:layout_constraintLeft_toLeftOf="@+id/ytv1"
+                        app:layout_constraintTop_toBottomOf="@+id/ytv1" />
+
+
+                    <TextView
+                        android:id="@+id/ytv4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="mmhg"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/ytv3"
+                        app:layout_constraintLeft_toRightOf="@+id/ytv3" />
+
+                    <TextView
+                        android:id="@+id/ytv5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="#418dfa"
+                        android:textSize="28sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/ytv3"
+                        app:layout_constraintLeft_toLeftOf="@+id/ytv2"
+                        app:layout_constraintTop_toTopOf="@+id/ytv3" />
+
+                    <TextView
+                        android:id="@+id/ytv6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="次"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/ytv5"
+                        app:layout_constraintLeft_toRightOf="@+id/ytv5" />
+
+
+                    <TextView
+                        android:id="@+id/ytv7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="收缩压"
+                        android:textSize="14sp"
+                        app:layout_constraintLeft_toLeftOf="@+id/ytv1"
+                        app:layout_constraintTop_toBottomOf="@+id/ytv3" />
+
+
+                    <TextView
+                        app:layout_constraintLeft_toLeftOf="@+id/ytv3"
+                        android:layout_marginBottom="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ytv7"
+                        android:id="@+id/ytv8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="89"
+                        android:textColor="#418dfa"
+                        android:textSize="28sp"
+                       />
+
+                    <TextView
+                        android:id="@+id/ytv9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="mmhg"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/ytv8"
+                        app:layout_constraintLeft_toRightOf="@+id/ytv8" />
+                </android.support.constraint.ConstraintLayout>
+
+            </com.lihang.ShadowLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

@@ -3,19 +3,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#5596ff">
 
-    <FrameLayout
+    <RelativeLayout
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white">
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="健康知识"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/know_layout_bg">
 
         <android.support.design.widget.TabLayout
             android:id="@+id/tab_layout"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             app:tabBackground="@android:color/transparent"
             app:tabGravity="fill"
             app:tabIndicatorColor="#5596ff"
@@ -27,11 +47,13 @@
             app:tabSelectedTextColor="#3CA0FF"
             app:tabTextAppearance="@style/TabLayoutTextSize2"
             app:tabTextColor="#A7A7A7" />
-    </FrameLayout>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/tab_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white" />
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/tab_viewpager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@android:color/white" />
+    </LinearLayout>
+
+
 </LinearLayout>

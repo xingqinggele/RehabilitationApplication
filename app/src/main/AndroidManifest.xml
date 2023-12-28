@@ -17,6 +17,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<!--        知识详情-->
+        <activity android:name=".activity.KnowledgeDetailActivity" />
     </application>
 
 </manifest>
