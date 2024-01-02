@@ -30,7 +30,7 @@ import java.util.List;
  * 创建日期：2021/10/26
  * 描述:
  */
-public abstract class BaseFragment<T extends BasePresenter,V extends IBaseView>extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
+public abstract class BaseFragment<T extends BasePresenter,V extends IBaseView>extends Fragment {
    protected T presenter;
     //加载框
     public SimpleLoadingDialog loadingDialog;
@@ -95,7 +95,7 @@ public abstract class BaseFragment<T extends BasePresenter,V extends IBaseView>e
 
     public void SwipeData(SwipeRefreshLayout swipeRefreshLayout){
 //        swipeRefreshLayout.setColorSchemeResources(R.color.login_title, R.color.green, R.color.colorAccent);
-        swipeRefreshLayout.setOnRefreshListener(this);
+        //swipeRefreshLayout.setOnRefreshListener(this);
     }
 
 

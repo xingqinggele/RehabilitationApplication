@@ -29,10 +29,7 @@ public class RehabilitationFragment extends BaseFragment<RehabilitationFragmentP
         return R.layout.rehabilitation_fragment;
     }
 
-    @Override
-    public void onRefresh() {
 
-    }
 
     @Override
     public void showErrorMessage(String msg) {

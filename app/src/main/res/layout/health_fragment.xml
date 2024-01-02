@@ -191,6 +191,7 @@
                 app:hl_shadowLimit="5dp">
 
                 <android.support.constraint.ConstraintLayout
+                    android:id="@+id/blood_oxygen_con"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 

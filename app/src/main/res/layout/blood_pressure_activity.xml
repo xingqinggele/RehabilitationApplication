@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e5e7e9"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/team_query_relative"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="25dp"
+                android:padding="5dp"
+                android:src="@mipmap/right_black_return_iv" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:visibility="invisible"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="血压"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/know_layout_bg">
+
+                <TextView
+                    android:id="@+id/time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:text="日期"
+                    android:textColor="#418dfa"
+                    android:textSize="16sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:visibility="invisible"
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="血氧范围（%）"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/time_tv" />
+
+
+                <TextView
+                    android:id="@+id/blood_oxygen_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="----"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="@id/tv1"
+                    app:layout_constraintTop_toBottomOf="@+id/tv1" />
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/line_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/blood_oxygen_tv" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:text="血氧饱和度介绍" />-->
+
+<!--            <android.support.constraint.ConstraintLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:layout_marginRight="10dp"-->
+<!--                android:layout_marginBottom="20dp"-->
+<!--                android:background="@drawable/know_layout_bg"-->
+<!--                android:paddingLeft="15dp"-->
+<!--                android:paddingTop="10dp"-->
+<!--                android:paddingRight="15dp"-->
+<!--                android:paddingBottom="10dp">-->
+
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:lineSpacingExtra="8dp"-->
+<!--                    android:text="血氧饱和度(SaO2)是血液中被氧结合的氧合血红蛋白 (HbO2)的容量占全部可结合的血红蛋白(Hb，hemoglobin)容量的百分比，即血液中血氧的浓度，它是呼吸循环的重要生理参数。而功能性氧饱和度为HbO2浓度与HbO2+Hb浓度之比，有别于氧合血红蛋白所占百分数。因此，监测动脉血气饱和度(SaO2)可以对肺的氧合和血红蛋白携氧能力进行估计。正常人体动脉血的血氧饱和度为98%，静脉血为75%。人体的新陈代谢过程是生物氧化过程，而新陈代谢过程中所需要的氧，是通过呼吸系统进入人体血液，与血液红细胞中的血红蛋白(Hb)，结合成氧合血红蛋白(HbO2)，再输送到人体各部分组织细胞中去血液携带输送氧气的能力即用血氧饱和度来衡量。" />-->
+<!--            </android.support.constraint.ConstraintLayout>-->
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

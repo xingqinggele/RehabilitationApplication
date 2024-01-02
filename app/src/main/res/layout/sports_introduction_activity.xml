@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#852">
+
+
+    <RelativeLayout
+        android:layout_alignParentTop="true"
+        android:id="@+id/team_query_relative"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="25dp"
+                android:padding="5dp"
+                android:src="@mipmap/right_black_return_iv" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:visibility="invisible"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="血压"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_above="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sports_line_bg"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:text="title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/know_layout_bg">
+
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/sport_con_bg_iv">
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:id="@+id/con1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:text="5-10"
+                    app:layout_constraintEnd_toStartOf="@+id/con2"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/con2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:text="9-120"
+                    app:layout_constraintEnd_toStartOf="@+id/con3"
+                    app:layout_constraintStart_toEndOf="@+id/con1"
+                    app:layout_constraintTop_toTopOf="@+id/con1"/>
+
+                <LinearLayout
+                    android:id="@+id/con3"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/con2"
+                    app:layout_constraintTop_toTopOf="@+id/con1"
+                    app:layout_constraintBottom_toBottomOf="@+id/con2"
+                    android:gravity="center">
+
+
+                    <ImageView
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:src="@mipmap/watch_block_iv"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:textSize="14sp"
+                        android:textColor="#000"
+                        android:text="绑定手环"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintRight_toRightOf="@+id/con1"
+                    app:layout_constraintLeft_toLeftOf="@+id/con1"
+                    app:layout_constraintTop_toBottomOf="@+id/con1"
+                    android:text="分钟"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="#000"/>
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintRight_toRightOf="@+id/con2"
+                    app:layout_constraintLeft_toLeftOf="@+id/con2"
+                    app:layout_constraintTop_toBottomOf="@+id/con2"
+                    android:text="心率范围"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="#000"/>
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintRight_toRightOf="@+id/con3"
+                    app:layout_constraintLeft_toLeftOf="@+id/con3"
+                    app:layout_constraintTop_toBottomOf="@+id/con3"
+                    android:text="精准检测"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="#000"/>
+            </android.support.constraint.ConstraintLayout>
+
+            <com.lihang.ShadowLayout
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                app:hl_cornerRadius="5dp"
+                app:hl_shadowColor="#2a000000"
+                app:hl_shadowLimit="5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp">
+
+                <TextView
+                    android:textSize="12sp"
+                    android:layout_margin="12dp"
+                    android:lineSpacingExtra="2dp"
+                    android:text="简单来说，有氧运动 是指强度低且富韵律性的运动，其运动时间较长(约30分钟或以上)，运动强度在中等或中上的程度(最大心率值的60%至80%)。 是不是“有氧运动”，衡量的标准是心率。心率保持在150次/分钟的运动量为有氧运动，因为此时血液可以供给心肌足够的氧气;因此，它的特点是强度低有节泰、持续时间较长。要求每次锻炼的时间不少于30分"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </com.lihang.ShadowLayout>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/line1"
+        android:gravity="center"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <Button
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:background="@drawable/sports_btn_bg"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
+            android:text="开始"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

@@ -17,12 +17,13 @@ public class KnowledgeDetailActivity extends BaseActivity<KnowDetailPresenter, K
     private LinearLayout iv_back;
     @Override
     protected int getLayoutId() {
+        statusBarConfig(R.color.white,true).init();
         return R.layout.knowledge_detail_activity;
     }
 
     @Override
     protected KnowDetailPresenter createPresenter() {
-        statusBarConfig(R.color.white,true).init();
+
         return new KnowDetailPresenter();
     }
 

@@ -104,10 +104,7 @@ public class KnowledgeFragment extends BaseFragment<KnowledgePresenter, Knowledg
         return R.layout.know_ledge_fragment;
     }
 
-    @Override
-    public void onRefresh() {
 
-    }
 
     @Override
     public void showErrorMessage(String msg) {

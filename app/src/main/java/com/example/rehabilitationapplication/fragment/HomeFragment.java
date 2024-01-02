@@ -24,10 +24,9 @@ public class HomeFragment extends BaseFragment<HomePresenter,HomeView> implement
     @Override
     protected void init(View view) {
         fragments = new Fragment[]{
-
-                new MovementFragment(),
-                new RehabilitationFragment()};
-        getActivity().getSupportFragmentManager().beginTransaction()
+                new RehabilitationFragment(),
+                new MovementFragment()};
+        getChildFragmentManager().beginTransaction()
                 .add(R.id.home_frame, fragments[0])
                 .commit();
 
@@ -47,10 +46,6 @@ public class HomeFragment extends BaseFragment<HomePresenter,HomeView> implement
         return R.layout.home_fragment;
     }
 
-    @Override
-    public void onRefresh() {
-
-    }
 
     @Override
     public void showErrorMessage(String msg) {
@@ -84,9 +79,9 @@ public class HomeFragment extends BaseFragment<HomePresenter,HomeView> implement
         if (lastFragmentIndex == to) {
             return;
         }
-        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+        FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
         if (!fragments[to].isAdded()) {
-            transaction.add(R.id.main_frame, fragments[to]);
+            transaction.add(R.id.home_frame, fragments[to]);
         } else {
             transaction.show(fragments[to]);
         }

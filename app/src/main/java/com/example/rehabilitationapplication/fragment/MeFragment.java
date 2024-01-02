@@ -29,10 +29,7 @@ public class MeFragment extends BaseFragment<MePresenter, MeView> implements MeV
         return R.layout.me_fragment;
     }
 
-    @Override
-    public void onRefresh() {
 
-    }
 
     @Override
     public void showErrorMessage(String msg) {

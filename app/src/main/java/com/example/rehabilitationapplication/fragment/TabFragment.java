@@ -25,7 +25,7 @@ import java.util.List;
  * 创建日期：2023/12/27
  * 描述: 知识子页
  */
-public class TabFragment extends BaseFragment<TabPresenter, TabView> implements TabView, BaseQuickAdapter.OnItemClickListener {
+public class TabFragment extends BaseFragment<TabPresenter, TabView> implements TabView, BaseQuickAdapter.OnItemClickListener, SwipeRefreshLayout.OnRefreshListener {
     private SwipeRefreshLayout swipe_layout;
     private RecyclerView recycle_view;
     private KnowledgeTabAdapter mAdapter;

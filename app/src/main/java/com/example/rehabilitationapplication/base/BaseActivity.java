@@ -31,7 +31,7 @@ public abstract class BaseActivity<T extends BasePresenter, V extends IBaseView>
     public SimpleLoadingDialog loadingDialog;
     //状态栏沉浸
     private ImmersionBar mImmersionBar;
-    protected Context mContext;
+    protected static Context mContext;
     public static List<Activity> activitys;
 
     @Override

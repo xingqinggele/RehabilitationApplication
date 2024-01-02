@@ -62,16 +62,15 @@
                 android:button="@null" />
         </RadioGroup>
 
+
         <FrameLayout
             android:layout_marginTop="10dp"
             android:id="@+id/home_frame"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-             />
-
+            />
 
 
     </LinearLayout>
-
 
 </LinearLayout>

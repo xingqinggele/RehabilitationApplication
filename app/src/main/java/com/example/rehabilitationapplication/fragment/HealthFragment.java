@@ -1,8 +1,11 @@
 package com.example.rehabilitationapplication.fragment;
 
+import android.content.Intent;
+import android.support.constraint.ConstraintLayout;
 import android.view.View;
 
 import com.example.rehabilitationapplication.R;
+import com.example.rehabilitationapplication.activity.BloodOxygenActivity;
 import com.example.rehabilitationapplication.base.BaseFragment;
 import com.example.rehabilitationapplication.persenter.HealthPresenter;
 import com.example.rehabilitationapplication.view.HealthView;
@@ -12,10 +15,14 @@ import com.example.rehabilitationapplication.view.HealthView;
  * 创建日期：2023/12/27
  * 描述:健康页
  */
-public class HealthFragment extends BaseFragment<HealthPresenter, HealthView>implements HealthView {
+public class HealthFragment extends BaseFragment<HealthPresenter, HealthView> implements HealthView, View.OnClickListener {
+    //血氧
+    private ConstraintLayout blood_oxygen_con;
+
     @Override
     protected void init(View view) {
-
+        blood_oxygen_con = view.findViewById(R.id.blood_oxygen_con);
+        blood_oxygen_con.setOnClickListener(this);
     }
 
     @Override
@@ -28,10 +35,6 @@ public class HealthFragment extends BaseFragment<HealthPresenter, HealthView>imp
         return R.layout.health_fragment;
     }
 
-    @Override
-    public void onRefresh() {
-
-    }
 
     @Override
     public void showErrorMessage(String msg) {
@@ -46,5 +49,14 @@ public class HealthFragment extends BaseFragment<HealthPresenter, HealthView>imp
     @Override
     public void downProgress() {
 
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.blood_oxygen_con:
+                startActivity(new Intent(getActivity(), BloodOxygenActivity.class));
+                break;
+        }
     }
 }
