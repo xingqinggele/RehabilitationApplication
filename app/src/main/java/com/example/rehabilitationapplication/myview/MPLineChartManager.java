@@ -231,7 +231,7 @@ public class MPLineChartManager {
         // 创建一个数据集,并给它一个类型
         LineDataSet set = new LineDataSet(values, title);
         // 在这里设置线
-        set.enableDashedLine(dl, dl, 0f);
+        set.enableDashedLine(dl, dl, 1f);
         set.setColor(color);
         set.setCircleColor(color);
         set.setLineWidth(2f);
@@ -239,10 +239,10 @@ public class MPLineChartManager {
         set.setValueTextSize(txtSize);
         set.setCircleColor(color);
         //是否禁用点击高亮线
-        set.setHighlightEnabled(isDHL);
-        set.enableDashedHighlightLine(dHL, dHL, 0f);//点击后的高亮线的显示样式
-        set.setHighlightLineWidth(2f);//设置点击交点后显示高亮线宽
-        set.setHighLightColor(colorDHL);//设置点击交点后显示交高亮线的颜色
+//        set.setHighlightEnabled(isDHL);
+//        set.enableDashedHighlightLine(dHL, dHL, 0f);//点击后的高亮线的显示样式
+//        set.setHighlightLineWidth(1f);//设置点击交点后显示高亮线宽
+//        set.setHighLightColor(colorDHL);//设置点击交点后显示交高亮线的颜色
         //填充
         set.setDrawFilled(isFill);
         if (Utils.getSDKInt() >= 18) {// 填充背景只支持18以上

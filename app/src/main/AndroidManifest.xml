@@ -10,7 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.BloodPressureActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,7 +19,6 @@
         </activity>
 <!--        知识详情-->
         <activity android:name=".activity.KnowledgeDetailActivity" />
-        <activity android:name=".activity.BloodOxygenActivity" />
         <activity android:name=".activity.GoSportsActivity" />
     </application>
 

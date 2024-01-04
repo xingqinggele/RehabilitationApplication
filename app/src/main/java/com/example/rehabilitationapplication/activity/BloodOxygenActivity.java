@@ -35,14 +35,15 @@ public class BloodOxygenActivity extends BaseActivity<BloodOxygenPresenter, Bloo
     private LineChart line_chart;
     private MyMarkerView mv;
     private MPLineChartManager mpLineChartManager;
-    private ArrayList<String> xValue= new ArrayList<>();
+    private ArrayList<String> xValue = new ArrayList<>();
     private ArrayList<Entry> entryList = new ArrayList<>();
     //时间筛选
     private TextView time_tv;
     private LinearLayout iv_back;
+
     @Override
     protected int getLayoutId() {
-        statusBarConfig(R.color.white,true).init();
+        statusBarConfig(R.color.white, true).init();
         return R.layout.blood_oxygen_activity;
     }
 
@@ -68,7 +69,6 @@ public class BloodOxygenActivity extends BaseActivity<BloodOxygenPresenter, Bloo
         clickLineChart(line_chart, entryList, xValue, 5);
         time_tv = findViewById(R.id.time_tv);
         iv_back = findViewById(R.id.iv_back);
-
     }
 
     @Override
@@ -100,7 +100,6 @@ public class BloodOxygenActivity extends BaseActivity<BloodOxygenPresenter, Bloo
         lineChart.setDrawBorders(false);
         //是否展示网格线
         lineChart.setDrawGridBackground(false);
-
         mv = new MyMarkerView(this, R.layout.marker_view, lineChart, xvalue);
         mv.setChartView(lineChart);
         lineChart.setMarker(mv);
@@ -115,7 +114,7 @@ public class BloodOxygenActivity extends BaseActivity<BloodOxygenPresenter, Bloo
         //Y轴动画 动画速度
         mpLineChartManager.animationY(1000); // 图4
         //添加线
-        mpLineChartManager.addData(values1, null, 0f, getResources().getColor(R.color.app_color), 8f, true, 5f, 0, true, getResources().getColor(R.color.white));
+        mpLineChartManager.addData(values1, null, 0f, getResources().getColor(R.color.linecolor), 8f, true, 5f, 0, false, getResources().getColor(R.color.bomcolor));
         //切换立方
         mpLineChartManager.changeMode(LineDataSet.Mode.HORIZONTAL_BEZIER);
         //是否显示顶点值
@@ -125,12 +124,13 @@ public class BloodOxygenActivity extends BaseActivity<BloodOxygenPresenter, Bloo
         mpLineChartManager.setInteraction(true, false, false, false, false, false, false, false);
         //设置图例
         mpLineChartManager.setLegend(Legend.LegendPosition.RIGHT_OF_CHART, 10f, Color.BLACK, Legend.LegendForm.NONE);
-    }
+}
+
     /*************************************************** 新的折线图 end *****************************************/
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.time_tv:
                 selectTime(time_tv);
                 break;
@@ -142,6 +142,7 @@ public class BloodOxygenActivity extends BaseActivity<BloodOxygenPresenter, Bloo
 
     /**
      * 时间选择
+     *
      * @param textView
      */
     public static void selectTime(TextView textView) {
