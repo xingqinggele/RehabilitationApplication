@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#70a6ff">
+    android:background="@mipmap/login_bg_iv"
+    android:orientation="vertical">
 
 
     <android.support.constraint.ConstraintLayout
-        android:layout_marginTop="80dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="50dp"
-        android:orientation="vertical"
-        android:background="@mipmap/login_ed_bg">
+        android:background="@mipmap/login_ed_bg"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:gravity="center"
             android:id="@+id/r1"
-            app:layout_constraintTop_toTopOf="parent"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginLeft="40dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="80dp"
             android:layout_marginRight="40dp"
             android:background="@drawable/login_rdit_rela_bg"
-            android:orientation="horizontal">
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
 
@@ -38,26 +38,26 @@
                 android:src="@mipmap/login_name_iv" />
 
             <EditText
-                android:layout_marginLeft="10dp"
-                android:textSize="14sp"
-                android:background="@null"
                 android:id="@+id/user_name_ed"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="请输入你的姓名" />
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:hint="请输入你的姓名"
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
-            android:gravity="center"
-            android:orientation="horizontal"
             android:id="@+id/r2"
-            app:layout_constraintTop_toBottomOf="@+id/r1"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="40dp"
-            android:background="@drawable/login_rdit_rela_bg">
+            android:background="@drawable/login_rdit_rela_bg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/r1">
 
             <ImageView
                 android:layout_width="20dp"
@@ -67,64 +67,59 @@
                 android:src="@mipmap/login_id_iv" />
 
             <EditText
-                android:layout_marginLeft="10dp"
-                android:textSize="14sp"
-                android:background="@null"
                 android:id="@+id/user_id_number_ed"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="请输入身份证号" />
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:hint="请输入身份证号"
+                android:textSize="14sp" />
         </LinearLayout>
 
-            <LinearLayout
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:id="@+id/r3"
-                app:layout_constraintTop_toBottomOf="@+id/r2"
-                android:layout_marginTop="20dp"
+        <LinearLayout
+            android:id="@+id/r3"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/login_rdit_rela_bg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/r2">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:src="@mipmap/login_phone_iv" />
+
+            <EditText
+                android:id="@+id/user_phone_ed"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
-                android:background="@drawable/login_rdit_rela_bg">
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="20dp"
-                    android:src="@mipmap/login_phone_iv" />
-
-                <EditText
-                    android:layout_marginLeft="10dp"
-                    android:textSize="14sp"
-                    android:background="@null"
-                    android:id="@+id/user_phone_ed"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="请输入手机号" />
-            </LinearLayout>
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:hint="请输入手机号"
+                android:phoneNumber="true"
+                android:textSize="14sp" />
+        </LinearLayout>
 
 
-            <Button
-                android:layout_marginBottom="100dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/r3"
-                android:text="登录"
-                android:textColor="#FFFFFF"
-                android:background="@drawable/login_btn_bg"
-                android:layout_marginTop="50dp"
-                android:layout_marginRight="40dp"
-                android:layout_marginLeft="40dp"
-                android:id="@+id/login_btn"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"/>
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="60dp"
+            android:background="@drawable/login_btn_bg"
+            android:text="登录"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/r3" />
     </android.support.constraint.ConstraintLayout>
 
-
-
-
-
-
-
-</LinearLayout>
+</RelativeLayout>

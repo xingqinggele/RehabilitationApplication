@@ -3,13 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@mipmap/go_to_sp_bg_iv">
 
     <RelativeLayout
         android:id="@+id/team_query_relative"
         android:layout_width="match_parent"
         android:layout_height="44dp"
-        android:background="@color/white">
+        >
 
         <LinearLayout
             android:id="@+id/iv_back"
@@ -40,10 +41,15 @@
     </RelativeLayout>
 
     <android.support.constraint.ConstraintLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@mipmap/timer_iv"
         android:layout_width="match_parent"
         android:layout_height="150dp">
 
         <TextView
+            android:layout_marginTop="30dp"
             android:id="@+id/tv1"
             android:textColor="#1cdf94"
             android:textStyle="bold"
@@ -76,15 +82,16 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="40dp">
+        android:layout_marginTop="60dp">
 
         <LinearLayout
+
             android:layout_marginRight="10dp"
             android:id="@+id/line1"
             android:paddingTop="10dp"
             android:paddingLeft="15dp"
             android:paddingRight="20dp"
-            android:background="#b5abf9"
+            android:background="@mipmap/xueya_bg_iv"
             app:layout_constraintRight_toLeftOf="@+id/guideline"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -162,7 +169,7 @@
             app:layout_constraintHeight_percent="0.47"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:background="#8ec3fb">
+            android:background="@mipmap/xueyang_bg_iv">
 
             <TextView
                 android:layout_marginTop="10dp"
@@ -195,7 +202,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:background="#f7ab7a">
+            android:background="@mipmap/xinlv_bg_iv">
 
             <TextView
                 android:layout_marginTop="10dp"
@@ -220,7 +227,7 @@
     </android.support.constraint.ConstraintLayout>
 
     <LinearLayout
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="40dp"
         android:gravity="center"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
@@ -228,16 +235,16 @@
         android:layout_height="wrap_content">
 
         <ImageView
+            android:src="@mipmap/end_iv"
             android:layout_marginRight="25dp"
-            android:background="#1cdf94"
-            android:layout_width="130dp"
-            android:layout_height="130dp"/>
+            android:layout_width="110dp"
+            android:layout_height="110dp"/>
 
         <ImageView
+            android:src="@mipmap/stop_iv"
             android:layout_marginLeft="25dp"
-            android:background="#cccecd"
-            android:layout_width="130dp"
-            android:layout_height="130dp"/>
+            android:layout_width="110dp"
+            android:layout_height="110dp"/>
 
 
     </LinearLayout>

@@ -16,4 +16,8 @@
 
     <color name="transparent_gray">#6f6f6f</color>
 
+    <color name="sport_introduction_title">#e7fbfe</color>
+    <color name="red_dof">#fcc3c3</color>
+    <color name="red_df">#f77474</color>
+
 </resources>

@@ -10,16 +10,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.BloodPressureActivity">
+        <activity android:name=".activity.HeartRateActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<!--        知识详情-->
-        <activity android:name=".activity.KnowledgeDetailActivity" />
-        <activity android:name=".activity.GoSportsActivity" />
+
+        <activity android:name=".MainActivity"
+             android:configChanges="screenSize|keyboardHidden|orientation"/>
+        <activity android:name=".activity.SportsIntroductionActivity"
+             android:configChanges="screenSize|keyboardHidden|orientation"/>
+        <activity android:name=".activity.GoSportsActivity"
+             android:configChanges="screenSize|keyboardHidden|orientation"/>
     </application>
 
 </manifest>
