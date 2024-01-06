@@ -2,6 +2,8 @@ package com.example.rehabilitationapplication.activity;
 
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.view.View;
+import android.widget.LinearLayout;
 
 import com.example.rehabilitationapplication.R;
 import com.example.rehabilitationapplication.base.BaseActivity;
@@ -24,7 +26,7 @@ import java.util.List;
  * 创建日期：2024/1/5
  * 描述:心率
  */
-public class HeartRateActivity extends BaseActivity<HeartRatePresenter, HeartRateView> implements HeartRateView {
+public class HeartRateActivity extends BaseActivity<HeartRatePresenter, HeartRateView> implements HeartRateView, View.OnClickListener {
     private LineChart line_chart;
 
     private LineChart ele_line_chart;
@@ -32,6 +34,7 @@ public class HeartRateActivity extends BaseActivity<HeartRatePresenter, HeartRat
     private MPLineChartManager mpLineChartManager;
     private ArrayList<String> xValue = new ArrayList<>();
     private ArrayList<Entry> entryList = new ArrayList<>();
+    private LinearLayout iv_back;
     @Override
     protected int getLayoutId() {
         return R.layout.heart_rate_activity;
@@ -44,6 +47,7 @@ public class HeartRateActivity extends BaseActivity<HeartRatePresenter, HeartRat
 
     @Override
     protected void init() {
+        iv_back = findViewById(R.id.iv_back);
         line_chart = findViewById(R.id.line_chart);
         xValue.add("00:00");
         entryList.add(new Entry(0, 1));
@@ -99,7 +103,7 @@ public class HeartRateActivity extends BaseActivity<HeartRatePresenter, HeartRat
 
     @Override
     protected void initListener() {
-
+        iv_back.setOnClickListener(this);
     }
 
     @Override
@@ -115,5 +119,10 @@ public class HeartRateActivity extends BaseActivity<HeartRatePresenter, HeartRat
     @Override
     public void downProgress() {
 
+    }
+
+    @Override
+    public void onClick(View view) {
+        finish();
     }
 }

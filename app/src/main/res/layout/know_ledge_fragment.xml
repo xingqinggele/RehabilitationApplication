@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="#5596ff">
+    android:background="@mipmap/home_layout_bg_iv">
 
     <RelativeLayout
         android:layout_marginTop="20dp"
@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="健康知识"
+            android:text="知  识"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
 

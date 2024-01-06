@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/app_color"
+    android:background="@mipmap/head_layout_bg_iv"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -42,14 +42,15 @@
                 app:hl_shadowLimit="5dp">
 
                 <android.support.constraint.ConstraintLayout
+                    android:id="@+id/blood_heart_rate_con"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
 
                     <ImageView
                         android:id="@+id/iv1"
-                        android:layout_width="70dp"
-                        android:layout_height="50dp"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="10dp"
                         android:src="@mipmap/xinlv_iv"
@@ -74,7 +75,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="20dp"
                         android:text="心率"
-                        android:textSize="14sp"
+                        android:textSize="13sp"
                         app:layout_constraintLeft_toLeftOf="@+id/iv1"
                         app:layout_constraintTop_toBottomOf="@+id/iv1" />
 
@@ -85,7 +86,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginRight="100dp"
                         android:text="预警次数"
-                        android:textSize="14sp"
+                        android:textSize="13sp"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tv1" />
 
@@ -94,10 +95,10 @@
                         android:id="@+id/tv3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="10dp"
                         android:text="89"
                         android:textColor="#fa9191"
-                        android:textSize="28sp"
+                        android:textSize="24sp"
                         app:layout_constraintLeft_toLeftOf="@+id/tv1"
                         app:layout_constraintTop_toBottomOf="@+id/tv1" />
 
@@ -108,7 +109,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:text="次/分"
-                        android:textSize="14sp"
+                        android:textSize="13sp"
                         app:layout_constraintBottom_toBottomOf="@+id/tv3"
                         app:layout_constraintLeft_toRightOf="@+id/tv3" />
 
@@ -118,7 +119,7 @@
                         android:layout_height="wrap_content"
                         android:text="0"
                         android:textColor="#fa9191"
-                        android:textSize="28sp"
+                        android:textSize="24sp"
                         app:layout_constraintBottom_toBottomOf="@+id/tv3"
                         app:layout_constraintLeft_toLeftOf="@+id/tv2"
                         app:layout_constraintTop_toTopOf="@+id/tv3" />
@@ -129,7 +130,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:text="次"
-                        android:textSize="14sp"
+                        android:textSize="13sp"
                         app:layout_constraintBottom_toBottomOf="@+id/tv5"
                         app:layout_constraintLeft_toRightOf="@+id/tv5" />
 
@@ -139,7 +140,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="40dp"
-                        android:layout_marginTop="30dp"
+                        android:layout_marginTop="20dp"
                         android:text="最大心率"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/tv3" />
@@ -197,8 +198,8 @@
 
                     <ImageView
                         android:id="@+id/xiv1"
-                        android:layout_width="70dp"
-                        android:layout_height="50dp"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="10dp"
                         android:src="@mipmap/xueyang_iv"
@@ -221,9 +222,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="10dp"
                         android:text="血氧饱和度"
-                        android:textSize="14sp"
+                        android:textSize="13sp"
                         app:layout_constraintLeft_toLeftOf="@+id/xiv1"
                         app:layout_constraintTop_toBottomOf="@+id/xiv1" />
 
@@ -234,7 +235,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginRight="100dp"
                         android:text="预警次数"
-                        android:textSize="14sp"
+                        android:textSize="13sp"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/xtv1" />
 
@@ -245,10 +246,10 @@
                         android:id="@+id/xtv3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="10dp"
                         android:text="89"
                         android:textColor="#dda0fa"
-                        android:textSize="28sp"
+                        android:textSize="24sp"
                         app:layout_constraintLeft_toLeftOf="@+id/xtv1"
                         app:layout_constraintTop_toBottomOf="@+id/xtv1" />
 
@@ -259,7 +260,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:text="%"
-                        android:textSize="14sp"
+                        android:textSize="13sp"
                         app:layout_constraintBottom_toBottomOf="@+id/xtv3"
                         app:layout_constraintLeft_toRightOf="@+id/xtv3" />
 
@@ -300,13 +301,14 @@
                 android:layout_marginBottom="20dp">
 
                 <android.support.constraint.ConstraintLayout
+                    android:id="@+id/blood_pressure_con"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                     <ImageView
                         android:id="@+id/yiv1"
-                        android:layout_width="70dp"
-                        android:layout_height="50dp"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="10dp"
                         android:src="@mipmap/xueya_iv"
@@ -317,7 +319,7 @@
                     <ImageView
                         android:layout_width="15dp"
                         android:layout_height="15dp"
-                        android:layout_marginRight="20dp"
+                        android:layout_marginRight="10dp"
                         android:src="@mipmap/back_right"
                         app:layout_constraintBottom_toBottomOf="@+id/yiv1"
                         app:layout_constraintRight_toRightOf="parent"
@@ -328,9 +330,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="10dp"
                         android:text="舒张压"
-                        android:textSize="14sp"
+                        android:textSize="13sp"
                         app:layout_constraintLeft_toLeftOf="@+id/yiv1"
                         app:layout_constraintTop_toBottomOf="@+id/yiv1" />
 
@@ -341,7 +343,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginRight="100dp"
                         android:text="预警次数"
-                        android:textSize="14sp"
+                        android:textSize="13sp"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/ytv1" />
 
@@ -350,10 +352,10 @@
                         android:id="@+id/ytv3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="10dp"
                         android:text="89"
                         android:textColor="#418dfa"
-                        android:textSize="28sp"
+                        android:textSize="24sp"
                         app:layout_constraintLeft_toLeftOf="@+id/ytv1"
                         app:layout_constraintTop_toBottomOf="@+id/ytv1" />
 
@@ -364,7 +366,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:text="mmhg"
-                        android:textSize="14sp"
+                        android:textSize="13sp"
                         app:layout_constraintBottom_toBottomOf="@+id/ytv3"
                         app:layout_constraintLeft_toRightOf="@+id/ytv3" />
 
@@ -374,7 +376,7 @@
                         android:layout_height="wrap_content"
                         android:text="0"
                         android:textColor="#418dfa"
-                        android:textSize="28sp"
+                        android:textSize="24sp"
                         app:layout_constraintBottom_toBottomOf="@+id/ytv3"
                         app:layout_constraintLeft_toLeftOf="@+id/ytv2"
                         app:layout_constraintTop_toTopOf="@+id/ytv3" />
@@ -385,7 +387,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:text="次"
-                        android:textSize="14sp"
+                        android:textSize="13sp"
                         app:layout_constraintBottom_toBottomOf="@+id/ytv5"
                         app:layout_constraintLeft_toRightOf="@+id/ytv5" />
 
@@ -394,9 +396,9 @@
                         android:id="@+id/ytv7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="10dp"
                         android:text="收缩压"
-                        android:textSize="14sp"
+                        android:textSize="13sp"
                         app:layout_constraintLeft_toLeftOf="@+id/ytv1"
                         app:layout_constraintTop_toBottomOf="@+id/ytv3" />
 
@@ -409,10 +411,10 @@
                         android:id="@+id/ytv8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="10dp"
                         android:text="89"
                         android:textColor="#418dfa"
-                        android:textSize="28sp"
+                        android:textSize="24sp"
                        />
 
                     <TextView
@@ -421,7 +423,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:text="mmhg"
-                        android:textSize="14sp"
+                        android:textSize="13sp"
                         app:layout_constraintBottom_toBottomOf="@+id/ytv8"
                         app:layout_constraintLeft_toRightOf="@+id/ytv8" />
                 </android.support.constraint.ConstraintLayout>

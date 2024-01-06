@@ -2,6 +2,8 @@ package com.example.rehabilitationapplication.activity;
 
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.view.View;
+import android.widget.LinearLayout;
 
 import com.example.rehabilitationapplication.R;
 import com.example.rehabilitationapplication.base.BaseActivity;
@@ -27,7 +29,7 @@ import java.util.List;
  * 创建日期：2024/1/2
  * 描述:血压
  */
-public class BloodPressureActivity extends BaseActivity<BloodPressurePresenter, BloodPressureView>implements BloodPressureView {
+public class BloodPressureActivity extends BaseActivity<BloodPressurePresenter, BloodPressureView> implements BloodPressureView, View.OnClickListener {
 
     private LineChart line_chart;
     private ArrayList<Entry> entryList = new ArrayList<>();
@@ -35,6 +37,7 @@ public class BloodPressureActivity extends BaseActivity<BloodPressurePresenter, 
     private ArrayList<String> xValue= new ArrayList<>();
     private MyMarkerView mv;
     private MPLineChartManager mpLineChartManager;
+    private LinearLayout iv_back;
     @Override
     protected int getLayoutId() {
         return R.layout.blood_pressure_activity;
@@ -48,6 +51,7 @@ public class BloodPressureActivity extends BaseActivity<BloodPressurePresenter, 
     @Override
     protected void init() {
         line_chart = findViewById(R.id.line_chart);
+        iv_back = findViewById(R.id.iv_back);
 
         xValue.add("00:00");
         entryList.add(new Entry(0, 100));
@@ -119,7 +123,7 @@ public class BloodPressureActivity extends BaseActivity<BloodPressurePresenter, 
 
     @Override
     protected void initListener() {
-
+        iv_back.setOnClickListener(this);
     }
 
     @Override
@@ -135,5 +139,10 @@ public class BloodPressureActivity extends BaseActivity<BloodPressurePresenter, 
     @Override
     public void downProgress() {
 
+    }
+
+    @Override
+    public void onClick(View view) {
+        finish();
     }
 }

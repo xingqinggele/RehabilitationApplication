@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.rehabilitationapplication.R;
@@ -21,6 +22,7 @@ import com.example.rehabilitationapplication.view.GoSportsView;
  */
 public class GoSportsActivity extends BaseActivity<GoSportsPresenter, GoSportsView> implements GoSportsView, View.OnClickListener {
     Button dialog;
+    private LinearLayout iv_back;
     @Override
     protected int getLayoutId() {
         statusBarConfig(R.color.white,true).init();
@@ -35,11 +37,13 @@ public class GoSportsActivity extends BaseActivity<GoSportsPresenter, GoSportsVi
     @Override
     protected void init() {
 //        dialog = findViewById(R.id.dialog);
+        iv_back = findViewById(R.id.iv_back);
     }
 
     @Override
     protected void initListener() {
 //        dialog.setOnClickListener(this);
+        iv_back.setOnClickListener(this);
     }
 
     @Override
@@ -63,6 +67,9 @@ public class GoSportsActivity extends BaseActivity<GoSportsPresenter, GoSportsVi
 //            case R.id.dialog:
 //                showDialog("是否结束运动?");
 //                break;
+            case R.id.iv_back:
+                finish();
+                break;
         }
     }
 

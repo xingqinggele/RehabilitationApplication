@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@color/app_color">
+    android:background="@mipmap/knowledge_detail_layout_bg">
 
     <RelativeLayout
         android:id="@+id/team_query_relative"
@@ -42,7 +42,7 @@
 
 
      <android.support.constraint.ConstraintLayout
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="130dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_width="match_parent"

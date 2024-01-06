@@ -43,7 +43,7 @@
                         android:layout_height="wrap_content"
                         android:text="0"
                         android:textColor="#418dfa"
-                        android:textSize="26sp" />
+                        android:textSize="16sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -52,7 +52,7 @@
                         android:layout_marginLeft="5dp"
                         android:text="次"
                         android:textColor="#418dfa"
-                        android:textSize="16sp" />
+                        android:textSize="13sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -69,7 +69,7 @@
                         android:layout_height="wrap_content"
                         android:text="10"
                         android:textColor="#59c7a5"
-                        android:textSize="26sp" />
+                        android:textSize="16sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -78,7 +78,7 @@
                         android:layout_marginLeft="5dp"
                         android:text="次"
                         android:textColor="#59c7a5"
-                        android:textSize="16sp" />
+                        android:textSize="13sp" />
 
                 </LinearLayout>
 
@@ -87,7 +87,6 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="按键3"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/con2"
                     app:layout_constraintTop_toTopOf="parent">
@@ -97,7 +96,7 @@
                         android:layout_height="wrap_content"
                         android:text="10"
                         android:textColor="#f89443"
-                        android:textSize="26sp" />
+                        android:textSize="16sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -106,7 +105,7 @@
                         android:layout_marginLeft="5dp"
                         android:text="次"
                         android:textColor="#f89443"
-                        android:textSize="16sp" />
+                        android:textSize="13sp" />
                 </LinearLayout>
 
                 <TextView
@@ -115,7 +114,7 @@
                     android:layout_marginTop="15dp"
                     android:text="今日运动"
                     android:textColor="#418dfa"
-                    android:textSize="16sp"
+                    android:textSize="13sp"
                     app:layout_constraintLeft_toLeftOf="@+id/con1"
                     app:layout_constraintRight_toRightOf="@+id/con1"
                     app:layout_constraintTop_toBottomOf="@+id/con1" />
@@ -126,7 +125,7 @@
                     android:layout_marginTop="15dp"
                     android:text="本周运动"
                     android:textColor="#59c7a5"
-                    android:textSize="16sp"
+                    android:textSize="13sp"
                     app:layout_constraintLeft_toLeftOf="@+id/con2"
                     app:layout_constraintRight_toRightOf="@+id/con2"
                     app:layout_constraintTop_toBottomOf="@+id/con2" />
@@ -137,7 +136,7 @@
                     android:layout_marginTop="15dp"
                     android:text="本月运动"
                     android:textColor="#f89443"
-                    android:textSize="16sp"
+                    android:textSize="13sp"
                     app:layout_constraintLeft_toLeftOf="@+id/con3"
                     app:layout_constraintRight_toRightOf="@+id/con3"
                     app:layout_constraintTop_toBottomOf="@+id/con3" />
@@ -167,7 +166,7 @@
                     android:layout_marginRight="20dp"
                     android:text="建议5-10分钟"
                     android:textColor="#418dfa"
-                    android:textSize="14sp"
+                    android:textSize="13sp"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toLeftOf="@+id/go_sports_iv"
                     app:layout_constraintTop_toTopOf="@+id/go_sports_iv" />
@@ -175,8 +174,8 @@
 
                 <ImageView
                     android:id="@+id/go_sports_iv"
-                    android:layout_width="80dp"
-                    android:layout_height="40dp"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="10dp"
                     android:src="@mipmap/go_movement_iv"
@@ -191,7 +190,7 @@
                     android:layout_marginRight="40dp"
                     android:text="准备活动"
                     android:textColor="#418dfa"
-                    android:textSize="28sp"
+                    android:textSize="22sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
@@ -200,7 +199,12 @@
             </android.support.constraint.ConstraintLayout>
 
         </com.lihang.ShadowLayout>
-
+        <com.lihang.ShadowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hl_cornerRadius="5dp"
+            app:hl_shadowColor="#2a000000"
+            app:hl_shadowLimit="5dp">
         <com.example.rehabilitationapplication.myview.MyListView
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
@@ -210,6 +214,7 @@
             android:layout_marginBottom="10dp"
             android:divider="@null"
             tools:listitem="@layout/movement_list_item" />
+        </com.lihang.ShadowLayout>
     </LinearLayout>
 
 

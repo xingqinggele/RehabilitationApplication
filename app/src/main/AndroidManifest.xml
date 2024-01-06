@@ -10,7 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.HeartRateActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,12 +18,16 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainActivity"
-             android:configChanges="screenSize|keyboardHidden|orientation"/>
+<!--        <activity android:name=".MainActivity"-->
+<!--             android:configChanges="screenSize|keyboardHidden|orientation"/>-->
         <activity android:name=".activity.SportsIntroductionActivity"
              android:configChanges="screenSize|keyboardHidden|orientation"/>
         <activity android:name=".activity.GoSportsActivity"
              android:configChanges="screenSize|keyboardHidden|orientation"/>
+        <activity android:name=".activity.HeartRateActivity" />
+        <activity android:name=".activity.BloodOxygenActivity" />
+        <activity android:name=".activity.BloodPressureActivity" />
+        <activity android:name=".activity.KnowledgeDetailActivity" />
     </application>
 
 </manifest>
